@@ -1,26 +1,37 @@
-<%= link_to "Appdomumsite", root_path, :class => 'brand' %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to 'Login', new_user_session_path %>
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Edit account', edit_user_registration_path %>
-    </li>
-    <% if current_user.has_role? :admin %>
+<nav class= "top-bar">
+  <ul class="title-area">
+      <div class= "large-3 columns">
       <li>
-      <%= link_to 'Admin', users_path %>
+      <%= link_to image_tag("navlogo3.png"), root_path %>
+      </li>
+    </div>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class= "divider"></li>
+    <% if user_signed_in? %>   
+      <li>
+        <%= link_to 'Edit account', edit_user_registration_path %>
+      </li>
+      <% if current_user.has_role? :admin %>
+        <li>
+          <%= link_to 'Admin', users_path %>
+        </li>
+      <% end %>
+      <li>
+        <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to 'Login', new_user_session_path %>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <%= link_to 'Employee Sign up', new_user_registration_path %>
       </li>
     <% end %>
-  <% else %>
-    <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    </li>
-  <% end %>
-</ul>
+  </ul>
+</section>
+</nav>

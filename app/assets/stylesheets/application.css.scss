@@ -12,13 +12,32 @@
  *= require foundation_and_overrides
  *= require_tree .
 */
+
+@import "foundation";
+
+.title-area {
+  padding: 5px 5px;
+}
+
+#name{
+  padding: 10px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+#main {
+  
+
+}
+
 .brand {
   float: left;
   padding-right: 8px;
 }
 ul.nav {
   list-style: none;
-  margin: 0 0 2em;
+  margin: 0 0 1em;
   padding: 0;
 }
 ul.nav li {
@@ -36,3 +55,4 @@ ul.nav li {
   background-color: #FCC;
   border: solid 1px #C66;
 }
+ //= require foundation_and_overrides
