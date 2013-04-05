@@ -23,8 +23,10 @@
         
       <% end %>
       <% if current_user == @androiddev %>
-      <%= render 'shared/microblog_form' %>
+        <%= render 'shared/microblog_form' %>
       <% end %>
+
+    <% end %>
 
   </div>
     
@@ -36,10 +38,19 @@
     
     <div class="large-4 columns">
       <%= image_tag("applelogo.jpg") %>
+      <h4>iPhone Developer MicroBlog</h4>
+    <% if @users.any? %>
       
-    </div>
-
+      <% if @iphonedev.microblogs.any? %>
+          <%= render @iphonedev.microblogs.first %>
+        
+      <% end %>
+      <% if current_user == @iphonedev %>
+        <%= render 'shared/microblog_form' %>
+      <% end %>
+      
     <% end %>
+    </div>
 </div>
 
 
