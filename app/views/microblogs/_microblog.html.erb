@@ -1,0 +1,16 @@
+
+	<span class="heading"><h5><%= microblog.header %></h5></span>
+	<span class="content"><p><%= microblog.content %></p></span>
+	<span class="timestamp">
+    Posted <%= time_ago_in_words(microblog.created_at) %> ago.
+  </span>
+  <span class="delete message">
+  <% if user_signed_in? %>
+  <% if current_user.id == microblog.user_id %>
+    <%= link_to "delete", microblog, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: microblog.content %>
+  <% end %>
+  <% end %>
+</span>
+

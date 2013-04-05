@@ -28,12 +28,15 @@
         <header>
           <%= render 'layouts/navigation' %> 
         </header>
-        <div id="main" role="main">
-          <%= yield %>
+        <div class="row">
+          <div class="large-12 columns">
+            <div id="main" role="main">
+              <%= yield %>
+            </div>
+          </div>
         </div>
         <%= javascript_include_tag "application" %>
-        <footer>
-        </footer>
+        <%= render 'layouts/footer' %>
   </div>
   </body>
 

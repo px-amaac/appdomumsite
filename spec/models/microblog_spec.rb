@@ -3,12 +3,14 @@ require 'spec_helper'
 let(:user) { FactoryGirl.create(:user) }
   before do
     # This code is wrong!
-    @micropost = Micropost.new(content: "Lorem ipsum", user_id: user.id)
+    @microblog = user.microblog.build(header: "header" content: "Lorem ipsum")
   end
 
-  subject { @micropost }
+  subject { @microblog }
 
   it { should respond_to(:header) }
   it { should respond_to(:content) }
   it { should respond_to(:user_id) }
+  it { should respond_to(:user) }
+  its(:user) { should == user }
 end

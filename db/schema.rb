@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401004739) do
+ActiveRecord::Schema.define(:version => 20130401011354) do
 
   create_table "microblogs", :force => true do |t|
     t.string   "header"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20130401004739) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "user_bio"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
