@@ -7,9 +7,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :microblogs, :dependent => :destroy
+  has_attached_file :user_image, :styles =>{ :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :user_bio
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :user_bio, :user_image
+  
+
+
   
 end

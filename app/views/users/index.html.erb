@@ -20,10 +20,12 @@
       <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
       <td>
         
-        <a data-toggle="modal" href="#role-options-<%= user.id %>" class="button" type="button">Change role</a>
-        <%= render user %>
+         <a href="roles#<%= user.id %>" data-reveal-id="<%= dom_id(user) %>" data-user= "user.id"class="button" type="button">Change role</a>
+        <%= render :partial => 'roles', :locals =>  { :user => user } %>
+
       </td>
-      <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
+      <td>
+        <%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button') unless user == current_user %></td>
     </tr>
   <% end %>
   </tbody>

@@ -1,5 +1,5 @@
 
-  
+<div class="fixed">
   <nav class= "top-bar">
     <ul class="title-area">
         <li>
@@ -30,6 +30,10 @@
         
         <li class="divider"></li>
         <li>
+          <%= link_to 'About Us', '#' %>
+        </li>
+        <li class="divider"></li>
+        <li>
           <%= link_to 'Login', new_user_session_path %>
         </li>
         <li class="divider"></li>
@@ -40,6 +44,7 @@
     </ul>
   </section>
   </nav>
+</div>
   <%= render 'layouts/messages' %>
 
 

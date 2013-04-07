@@ -7,6 +7,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem "formtastic"
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "will_paginate", '3.0.3'
 gem 'jquery-rails'
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]

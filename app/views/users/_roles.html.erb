@@ -1,0 +1,10 @@
+<div id="<%= dom_id(user) %>" class="reveal-modal" >
+  <%= semantic_form_for user, :url => user_path(user), :html => {:method => :put } do |f| %>
+      <h3>Change Role</h3>
+    <div class="reveal-modal-body">
+      <%= f.input :roles, :as => :check_boxes, :input_html => { :selected => user.role_ids } %>
+    </div>
+    <a class="close-reveal-modal">&#215;</a> 
+      <%= f.action :submit, :as => :button %>
+  <% end %>
+</div>
