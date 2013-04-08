@@ -3,6 +3,7 @@ Appdomumsite::Application.routes.draw do
     root :to => 'home#index'
   end
   resources :microblogs, only: [:create, :destroy]
+  resources :apps
 
   root :to => "home#index"
   match '/mobile_apps' , to: 'home#mobile_apps'

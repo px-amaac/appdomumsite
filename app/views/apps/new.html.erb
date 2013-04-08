@@ -1,0 +1,14 @@
+<h2>Create New App</h2>
+
+<%= semantic_form_for @app, :html => { :multipart => true } do |f| %>
+
+    <%= f.input :name, :as => :string %>
+    <%= f.input :description, :as => :text %>
+    <%= f.input :icon, :as => :file, :matching => "paperclip" %>
+    
+    <% f.semantic_fields_for :app_screenshot do |builder| %>
+      <%= builder.input :caption, :as => :string %>
+      <%= builder.input :app_screenshot, :as => :file, :matching => "paperclip" %>
+    <% end %>
+    <%= f.action :submit, :as => :button %>
+<% end %>
