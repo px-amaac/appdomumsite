@@ -16,17 +16,34 @@
 
 @import "foundation";
 
+.panel {
+  -moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; 
+}
+
+.clearing-thumbs {
+  li {
+  list-style-type: none;
+  }
+}
+
+.top-bar {
+  opacity:0.9;
+filter:alpha(opacity=90);
+}
+
 .title-area {
   padding: 5px 5px;
-  text-transform: uppercase;
   font-weight: bold;
   letter-spacing: -1px;
+  vertical-align:text-top;
 }
 
 #main{
   margin-top: 30px;
 }
-
 
 .brand {
   float: left;

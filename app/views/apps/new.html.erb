@@ -6,9 +6,12 @@
     <%= f.input :description, :as => :text %>
     <%= f.input :icon, :as => :file, :matching => "paperclip" %>
     
-    <% f.semantic_fields_for :app_screenshot do |builder| %>
-      <%= builder.input :caption, :as => :string %>
-      <%= builder.input :app_screenshot, :as => :file, :matching => "paperclip" %>
+    <%= f.semantic_fields_for :app_screenshots do |builder| %>
+
+    	<% if builder.object.new_record? %>
+    		<%= builder.input :image, :as => :file, :matching => "paperclip" %>
+    		<% end %>
     <% end %>
+
     <%= f.action :submit, :as => :button %>
 <% end %>

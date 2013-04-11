@@ -1,0 +1,23 @@
+<div class ="row">
+	<div class="small-4 columns">
+		<div class= "row">
+			<div class="large-12 columns">
+			<h2><%= @app.name %> </h2>
+			<%= image_tag @app.icon.url(:medium) %>
+			</div>
+		</div>
+	</div>
+	<div class="large-8 columns">
+		<p>Description: <%= @app.description %></p>
+	</div>
+</div>
+<div class= "row">
+	<ul class ="clearing-thumbs" data-clearing >
+		<% @app.app_screenshots.each do |app_screenshot| %>
+			<li><%= link_to app_screenshot.image.url(:large) do %>
+		  		<%= image_tag app_screenshot.image.url(:thumb), :data => { :caption => "This is a Caption" } %> 
+		  		<% end %>
+		  	</li>
+		<% end %>
+	</ul>
+</div>

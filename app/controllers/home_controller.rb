@@ -9,12 +9,6 @@ class HomeController < ApplicationController
 	end
   end
 
-  def mobile_apps
-  	
-
-
-  end
-
   def about
   	@users = User.all
   	@androiddevs = User.with_role(:androiddev)

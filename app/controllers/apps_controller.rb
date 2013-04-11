@@ -11,13 +11,15 @@ before_filter :authenticate_user!
 
   def new
     @app = App.new
+    4.times { @app.app_screenshots.build }
   end
 
 
   def create
 		@app = current_user.apps.build(params[:app])
+
 		if @app.save
-			flash[:success] = "App Created"
+			flash[:notice] = "App Created"
 			redirect_to root_url
 		end
 	end
@@ -25,6 +27,7 @@ before_filter :authenticate_user!
   def update
     
     @app = App.find(params[:id])
+
     if @app.update_attributes(params[:app])
       redirect_to apps_path, :notice => "App Updated."
     else

@@ -971,7 +971,7 @@ $panel-bg: #C9DFFF;
 $topbar-bg: #194e9e;
 
 // Height and margin
-$topbar-height: 50px;
+$topbar-height: emCalc(60px);
 $topbar-margin-bottom: emCalc(0px);
 
 // Control Input height for top bar
@@ -979,12 +979,12 @@ $topbar-margin-bottom: emCalc(0px);
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: bold;
-// $topbar-title-font-size: emCalc(30px);
+ $topbar-title-font-size: emCalc(30px);
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
 // $topbar-link-weight: bold;
-// $topbar-link-font-size: emCalc(17px);
+$topbar-link-font-size: emCalc(16px);
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: #2A7FFF;
