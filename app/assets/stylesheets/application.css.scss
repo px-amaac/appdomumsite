@@ -16,6 +16,10 @@
 
 @import "foundation";
 
+.img {
+  width: 100%
+}
+
 .panel {
   -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
@@ -23,22 +27,27 @@ border-radius: 10px; /* future proofing */
 -khtml-border-radius: 10px; 
 }
 
-.clearing-thumbs {
-  li {
+li {
   list-style-type: none;
   }
-}
+
 
 .top-bar {
   opacity:0.9;
 filter:alpha(opacity=90);
+
 }
 
+.logo {
+  @extend .hide-for-small; 
+  vertical-align:text-top;
+  postition: relative;
+
+}
 .title-area {
   padding: 5px 5px;
   font-weight: bold;
   letter-spacing: -1px;
-  vertical-align:text-top;
 }
 
 #main{
