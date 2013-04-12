@@ -1,30 +1,3 @@
-<h2>Create New App</h2>
+<h2>Edit App</h2>
 
-<%= semantic_form_for @app, :html => { :multipart => true } do |f| %>
-
-    <%= f.input :name, :as => :string %>
-    <%= f.input :description, :as => :text %>
-    <%= f.input :icon, :as => :file, :matching => "paperclip" %>
-    
-    <%= f.semantic_fields_for :app_screenshots do |builder| %>
-
-    	<% if builder.object.new_record? %>
-    		<%= builder.input :image, :as => :file, :matching => "paperclip" %>
-    		<% end %>
-    <% end %>
-
-<%= f.fields_for :app_screenshots do |screenshot_fields| %>
-
-	<% unless screenshot_fields.object.new_record? %>
-
-	 <p>
-	 	<%= link_to image_tag(screenshot_fields.object.image.url(:medium)), screenshot_fields.object.image.url(:medium) %>
-	 	<%= screenshot_fields.check_box :_destroy %>
-	 </p>
-	 <% end %>
- <% end %>
-
-
-
-    <%= f.action :submit, :as => :button %>
-<% end %>
+<%= render 'form' %>

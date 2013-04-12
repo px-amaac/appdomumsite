@@ -23,10 +23,11 @@ before_filter :authenticate_user!
 			redirect_to root_url
 		end
 	end
+
   
-  def update
+  def edit
     
-    @app = App.find(params[:id])
+    @app = current_user.apps.find_by_id(params[:id])
 
     if @app.update_attributes(params[:app])
       redirect_to apps_path, :notice => "App Updated."
