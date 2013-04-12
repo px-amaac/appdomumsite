@@ -16,9 +16,18 @@
 
 @import "foundation";
 
+@media only screen and (min-width: 768px) {
+.title-area {
+  margin-left: 6em;
+}
+
+
+}
+
 .img {
   width: 100%
 }
+
 
 .panel {
   -moz-border-radius: 10px;
@@ -31,23 +40,28 @@ li {
   list-style-type: none;
   }
 
+.fixed-icon {
+@extend .hide-for-small;
+    width: 10%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+
 
 .top-bar {
   opacity:0.9;
-filter:alpha(opacity=90);
+  filter:alpha(opacity=90);
 
 }
 
-.logo {
-  @extend .hide-for-small; 
-  vertical-align:text-top;
-  postition: relative;
-
-}
 .title-area {
   padding: 5px 5px;
   font-weight: bold;
   letter-spacing: -1px;
+  
 }
 
 #main{

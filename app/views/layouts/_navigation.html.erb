@@ -1,9 +1,8 @@
-
 <div class="fixed">
   <nav class= "top-bar">
     <ul class="title-area">
       <li>
-        <h2><%= link_to image_tag("officialLogo-100x197.png", :size => "100x197", :class => "logo" ) + "AppDomum",  root_path, :class => "textlogo" %></h2>
+        <h2><%= link_to "AppDomum",  root_path, :class => "textlogo" %></h2>
       </li>
       
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -42,6 +41,11 @@
     </ul>
   </section>
   </nav>
+</div>
+<div class= "small-4 columns">
+  <div class= "fixed-icon">
+    <%=link_to image_tag("officialLogo-100x197.png", :size => "100x197", :class => "logo" ), root_path %>
+  </div>
 </div>
   <%= render 'layouts/messages' %>
 

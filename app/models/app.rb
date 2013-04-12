@@ -7,7 +7,7 @@ class App < ActiveRecord::Base
 	validates :name, presence: true
 	validates :description, presence: true
 
-	  has_attached_file :icon, :styles =>{ :medium => "300x300>", :thumb => "150x150>" }, :default_url => "/images/:style/missing.png"
+	  has_attached_file :icon, :styles =>{ :medium => "300x300<", :thumb => "150x150<" }, :default_url => "/images/:style/missing.png"
 	  default_scope order: 'apps.created_at DESC'
 end
  
