@@ -2,24 +2,27 @@
 
     <%= f.input :name, :as => :string %>
     <%= f.input :description, :as => :text %>
-    <%= f.input :icon, :as => :file, :matching => "paperclip" %>
-    
-    <%= f.semantic_fields_for :app_screenshots do |builder| %>
 
-    	<% if builder.object.new_record? %>
-    		<%= builder.input :image, :as => :file, :matching => "paperclip" %>
-    		<% end %>
-    <% end %>
+    <% if f.object.new_record? %>
+        <%= f.input :icon, :as => :file, :matching => "paperclip" %>
+    <% else %>
+        <% image_tag(@app.icon.url(:thumb)) %>
+        <% end %>
 
-<%= f.semantic_fields_for :app_screenshots do |screenshot_fields| %>
 
-	<% unless screenshot_fields.object.new_record? %>
+    <div class="row">
+        <ul class ="inline-list">
+        <%= f.semantic_fields_for :app_screenshots do |builder| %>
 
-	 <p>
-	 	<%= link_to image_tag(screenshot_fields.object.image.url(:thumb)), screenshot_fields.object.image.url(:thumb) %>
-	 	<%= screenshot_fields.check_box :_destroy %>
-	 </p>
-	 <% end %>
- <% end %>
-    <%= f.action :submit, :as => :button %>
+        	<% if builder.object.new_record? %>
+        		<li><%= builder.input :image, :as => :file, :matching => "paperclip" %></li>
+            <% else %>
+            	
+        	 	<li><%= link_to image_tag(builder.object.image.url(:thumb)), builder.object.image.url(:thumb) %>
+        	 	<%= builder.check_box :_destroy %>
+            	</li>
+        	<% end %>
+        <% end %>
+    </div>
+        <%= f.action :submit, :as => :button %>
 <% end %>

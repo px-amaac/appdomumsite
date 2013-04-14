@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @contact = ContactUs::Contact.new
     @users = User.all
     @androiddevs = User.with_role(:androiddev)
     @iphonedevs = User.with_role(:iphonedev)
@@ -17,6 +16,17 @@ class HomeController < ApplicationController
     @chris = User.with_role(:chris)
     @interns = User.with_role(:intern)
   end
+
+  def dispatch_email
+    user_info = params[:user_info]
+    if ContactMailer.send_email(user_info).deliver
+      flash[:notice] = "Sent! We will get back to you shortly."
+    else
+      flash[:notice] = "Could Not Send Your Contact Form."
+    end
+    redirect_to root_path
+  end
+
 
 
 end

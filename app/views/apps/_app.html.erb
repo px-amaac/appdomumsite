@@ -5,8 +5,18 @@
 		</div>
 
 		<div class= "large-8 columns">
-			<h4><%= link_to app.name, app %></h4><br />
+			<h4><%= app.name%></h4><br />
 			<p><%= app.description %> </p>
+			<div class= "row">
+				<ul class ="clearing-thumbs inline-list" data-clearing >
+				<% app.app_screenshots.each do |app_screenshot| %>
+					<li><%= link_to app_screenshot.image.url(:large) do %>
+				  		<%= image_tag app_screenshot.image.url(:thumb), :data => { :caption => "This is a Caption" } %> 
+				  		<% end %>
+				  	</li>
+				<% end %>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

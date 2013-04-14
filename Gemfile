@@ -8,7 +8,7 @@ group :assets do
   gem 'jquery-fileupload-rails'
 end
 
-gem 'contact_us', '~> 0.4.0'
+gem "recaptcha", require: "recaptcha/rails"
 gem "formtastic"
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "will_paginate", '3.0.3'

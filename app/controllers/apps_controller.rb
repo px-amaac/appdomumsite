@@ -1,5 +1,5 @@
 class AppsController < ApplicationController
-before_filter :authenticate_user!
+skip_before_filter :authenticate_user!, :only => [ :index ] 
 
 	def index
     @apps = App.all
@@ -26,15 +26,19 @@ before_filter :authenticate_user!
 
   
   def edit
-    
     @app = current_user.apps.find_by_id(params[:id])
+  end
 
+
+  def update
+    @app = current_user.apps.find(params[:id])
     if @app.update_attributes(params[:app])
       redirect_to apps_path, :notice => "App Updated."
     else
       redirect_to apps_path, :alert => "Unable to update App."
     end
   end
+
     
   def destroy
 	    @app = current_user.apps.find_by_id(params[:id])

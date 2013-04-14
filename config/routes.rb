@@ -8,7 +8,7 @@ Appdomumsite::Application.routes.draw do
   root :to => "home#index"
   match '/mobile_apps' , to: 'home#mobile_apps'
   match '/about',   to: 'home#about'
-  match '/contact', to: 'home#contact'
+  match 'dispatch_email', to: 'home#dispatch_email', as: "dispatch_email", method: :post
   devise_for :users
   resources :users
 end
