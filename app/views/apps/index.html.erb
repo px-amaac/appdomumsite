@@ -1,2 +1,4 @@
 <h3>Apps Powered By AppDomum</h3>
+<% if user_signed_in? %>
+	<% if current_user
 <%= render @apps %>
