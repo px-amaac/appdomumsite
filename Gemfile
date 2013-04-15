@@ -6,7 +6,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-fileupload-rails'
+  gem 'foundation-social-web-icons-rails', git: "git://github.com/jclusso/foundation-social-web-icons-rails.git"
 end
+
 
 gem "recaptcha", require: "recaptcha/rails"
 gem "formtastic"

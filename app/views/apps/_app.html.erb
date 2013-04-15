@@ -5,7 +5,12 @@
 		</div>
 
 		<div class= "large-8 columns">
-			<h4><%= app.name%></h4><br />
+			<h4><%= app.name%></h4>
+			<% if user_signed_in? %> 
+				<% if app.user_id == current_user.id %>
+				<%= link_to 'Edit app', edit_app_path(app), :class => "button" %><br />
+				<% end %>
+			<% end %>
 			<p><%= app.description %> </p>
 			<div class= "row">
 				<ul class ="clearing-thumbs inline-list" data-clearing >

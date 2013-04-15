@@ -11,14 +11,24 @@
   <div><%= f.label :user_bio %><br />
   <%= f.text_area :user_bio %></div>
 
+  <div><%= f.label :github_link %><br />
+  <%= f.text_field :github_link %>
+
   <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
   <%= f.password_field :password, :autocomplete => "off" %></div>
 
   <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <%= f.password_field :password_confirmation %></div><br />
 
-  <div><%= f.label :user_image %><br />
-  <%= f.file_field :user_image %></div>
+  <p>
+    Icon natural sizes are thumb: 100x100 and meduim: 300x300.
+    For best results upload images of that size.
+  </p>
+
+
+  <%= link_to image_tag(f.object.user_image.url(:thumb)),
+    f.object.user_image.url(:medium) %>
+  <%= f.file_field :user_image %></div><br />
 
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>

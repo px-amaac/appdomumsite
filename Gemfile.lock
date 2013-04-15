@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/jclusso/foundation-social-web-icons-rails.git
+  revision: 68bc0cad37a953ab803f32065889028531fbeb6c
+  specs:
+    foundation-social-web-icons-rails (1.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
+
+GIT
   remote: git://github.com/thoughtbot/paperclip.git
   revision: 7d807c6af3e89c56e2e846352074f2eac1620115
   specs:
@@ -229,6 +237,7 @@ DEPENDENCIES
   factory_girl_rails (>= 4.2.0)
   figaro (>= 0.6.3)
   formtastic
+  foundation-social-web-icons-rails!
   hub (>= 1.10.2)
   jquery-fileupload-rails
   jquery-rails

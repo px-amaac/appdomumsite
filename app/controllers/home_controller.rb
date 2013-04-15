@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @users = User.all
+    @chris = User.with_role(:chris)
     @androiddevs = User.with_role(:androiddev)
     @iphonedevs = User.with_role(:iphonedev)
     

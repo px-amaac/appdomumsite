@@ -23,7 +23,6 @@ skip_before_filter :authenticate_user!, :only => [ :index ]
 			redirect_to root_url
 		end
 	end
-
   
   def edit
     @app = current_user.apps.find_by_id(params[:id])

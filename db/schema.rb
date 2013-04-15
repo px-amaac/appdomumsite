@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408005410) do
+ActiveRecord::Schema.define(:version => 20130415000759) do
 
   create_table "app_screenshots", :force => true do |t|
     t.string   "caption"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20130408005410) do
     t.string   "icon_content_type"
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
+    t.string   "android_link"
+    t.string   "iphone_link"
   end
 
   add_index "apps", ["user_id", "created_at"], :name => "index_apps_on_user_id_and_created_at"
@@ -78,6 +80,7 @@ ActiveRecord::Schema.define(:version => 20130408005410) do
     t.string   "user_image_content_type"
     t.integer  "user_image_file_size"
     t.datetime "user_image_updated_at"
+    t.string   "github_link"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
