@@ -5,7 +5,18 @@
 		</div>
 
 		<div class= "large-8 columns">
-			<h4><%= app.name%></h4>
+		    <div class="row">
+		    	<h4><%= app.name%></h4>
+				<ul class= "inline-list">
+		            <% unless app.android_link.nil? %>
+						<li><a href="<%= app.android_link %>" class="am-storeicon googleplay">Download on Google Play</a></li>
+					<% end %>
+					<% unless app.iphone_link.nil? %>
+						<li><a href="<%= app.iphone_link%>" class="am-storeicon apple">Download on Apps Store</a></li>
+					<% end %>
+				</ul>
+			</div>
+	            
 			<% if user_signed_in? %> 
 				<% if app.user_id == current_user.id %>
 				<%= link_to 'Edit app', edit_app_path(app), :class => "button" %><br />
@@ -14,12 +25,12 @@
 			<p><%= app.description %> </p>
 			<div class= "row">
 				<ul class ="clearing-thumbs inline-list" data-clearing >
-				<% app.app_screenshots.each do |app_screenshot| %>
-					<li><%= link_to app_screenshot.image.url(:large) do %>
-				  		<%= image_tag app_screenshot.image.url(:thumb), :data => { :caption => "This is a Caption" } %> 
-				  		<% end %>
-				  	</li>
-				<% end %>
+					<% app.app_screenshots.each do |app_screenshot| %>
+						<li><%= link_to app_screenshot.image.url(:large) do %>
+					  		<%= image_tag app_screenshot.image.url(:thumb), :data => { :caption => "This will be a Caption" } %> 
+					  		<% end %>
+					  	</li>
+					<% end %>
 				</ul>
 			</div>
 		</div>

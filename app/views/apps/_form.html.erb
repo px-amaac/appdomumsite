@@ -2,7 +2,10 @@
 
     <%= f.input :name, :as => :string %>
     <%= f.input :description, :as => :text %>
+    <%= f.input :android_link, :as => :string %>
+    <%= f.input :iphone_link, :as => :string %>
 
+    <p>All Icons default sizes are 300x300 and 150x150 px. For best results upload an image that is that size.</p>
     <% if f.object.new_record? %>
         <%= f.input :icon, :as => :file, :matching => "paperclip" %>
     <% else %>
@@ -11,6 +14,7 @@
 
 
     <div class="row">
+        <p>Because Screen Shots can be different sizes all screen shots scale to specific heights. For best results upload images with a height of 480 px. Width can be different sizes for instance tablets will have wider screen shots.</p>
         <ul class ="inline-list">
         <%= f.semantic_fields_for :app_screenshots do |builder| %>
 

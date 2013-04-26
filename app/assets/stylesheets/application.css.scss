@@ -94,4 +94,36 @@ ul.nav li {
   background-color: #FCC;
   border: solid 1px #C66;
 }
+
+.am-storeicon {
+  position: relative;
+  display: inline-block;
+  background-size: 100%;
+  width: 162px;
+  height: 48px;
+  text-indent: -999em;
+  text-align: left;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+ 
+
+.am-storeicon:hover {
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.googleplay {
+  background: image-url("googleplay-large.png") no-repeat;
+}
+ 
+.apple {
+  background: image-url("apple-large.png") no-repeat;
+}
  //= require foundation_and_overrides

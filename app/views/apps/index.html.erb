@@ -1,2 +1,10 @@
-<h3>Apps Powered By AppDomum</h3> 
+<h3>Apps Powered By AppDomum</h3>
+
+ <% if user_signed_in? %>
+   <% if current_user.has_role? :developer %>
+		 <%= link_to 'New App', new_app_path, :class => "button" %>
+	 <% end %>
+ <% end %>
+
+
 <%= render @apps %>
