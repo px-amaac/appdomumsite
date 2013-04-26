@@ -8,10 +8,10 @@
 		    <div class="row">
 		    	<h4><%= app.name%></h4>
 				<ul class= "inline-list">
-		            <% unless app.android_link.nil? %>
+		            <% unless app.android_link.empty? %>
 						<li><a href="<%= app.android_link %>" class="am-storeicon googleplay">Download on Google Play</a></li>
 					<% end %>
-					<% unless app.iphone_link.nil? %>
+					<% unless app.iphone_link.empty? %>
 						<li><a href="<%= app.iphone_link%>" class="am-storeicon apple">Download on Apps Store</a></li>
 					<% end %>
 				</ul>

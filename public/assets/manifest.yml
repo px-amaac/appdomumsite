@@ -7,12 +7,16 @@ appdomumsign.jpg: appdomumsign-afe860aec6d05c314ae362fb0fd4d1e2.jpg
 appdomumsign/index.jpg: appdomumsign-afe860aec6d05c314ae362fb0fd4d1e2.jpg
 appdomumsign2.jpg: appdomumsign2-7f328137e0224568dcb9e1a904986046.jpg
 appdomumsign2/index.jpg: appdomumsign2-7f328137e0224568dcb9e1a904986046.jpg
+apple-large.png: apple-large-a81944b0537834f4edf8df243feb7820.png
+apple-large/index.png: apple-large-a81944b0537834f4edf8df243feb7820.png
 apple-logo.jpg: apple-logo-2f463669adaace426ed72b7c53240288.jpg
 apple-logo/index.jpg: apple-logo-2f463669adaace426ed72b7c53240288.jpg
 apple-logo2.jpg: apple-logo2-94c1147205a5530d87f096561c470bd0.jpg
 apple-logo2/index.jpg: apple-logo2-94c1147205a5530d87f096561c470bd0.jpg
 applelogo.jpg: applelogo-df4b293ea00773bb2b4f01df48df82c4.jpg
 applelogo/index.jpg: applelogo-df4b293ea00773bb2b4f01df48df82c4.jpg
+googleplay-large.png: googleplay-large-bfc5892e400a1778ef1745303e69ce05.png
+googleplay-large/index.png: googleplay-large-bfc5892e400a1778ef1745303e69ce05.png
 logoname.png: logoname-4ca5623f9cf955f490f06ff2e004c27b.png
 logoname/index.png: logoname-4ca5623f9cf955f490f06ff2e004c27b.png
 mysetup.jpg: mysetup-2ec5c46777f76c3bc974867737789a0c.jpg
@@ -43,8 +47,8 @@ theoffice2.jpg: theoffice2-6598e757e3ac43a44bde9e3787d6da87.jpg
 theoffice2/index.jpg: theoffice2-6598e757e3ac43a44bde9e3787d6da87.jpg
 application.js: application-85e52d42fc3bd94f7d13b12c26ceada3.js
 application/index.js: application-85e52d42fc3bd94f7d13b12c26ceada3.js
-application.css: application-72a3c3e73ed19f5cf057689ccbd812a3.css
-application/index.css: application-72a3c3e73ed19f5cf057689ccbd812a3.css
+application.css: application-8157f3a5d4ad3b55b1cf56c2248f0074.css
+application/index.css: application-8157f3a5d4ad3b55b1cf56c2248f0074.css
 foundation.aaron: foundation-f3b61cef0c2d38bcf9c623d9933d0d7f.aaron
 foundation/index.aaron: foundation-f3b61cef0c2d38bcf9c623d9933d0d7f.aaron
 normalize.aaron: normalize-b24fc16a92b532a3f265ca71a54033d2.aaron
